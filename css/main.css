@@ -257,13 +257,20 @@ nav {
 }
 .Portfolio__item {
   background: var(--clr-accent);
+  overflow: hidden;
+}
+.Portfolio__item:focus{
+  position: relative;
+  z-index: 2;
 }
 
 .Portfolio__img {
-  transition: transition 750ms cubic(0.5, 0, 0.5, 0), opacity 250ms linear;
+  transition: transform 750ms cubic-bezier(.5, 0, .5, 1), 
+  opacity 250ms linear;
 }
 
-.portfolio__img: {
-  transform: scale(1, 2),
-  opacity: 0.75s;
+.Portfolio__img:hover,
+.Portfolio__item:focus .Portfolio__img {
+  transform: scale(1,2);
+  opacity: .75;
 }

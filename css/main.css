@@ -57,6 +57,10 @@ strong {
   outline-offset: 3px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -165,29 +169,28 @@ header {
   padding: 0.5em;
   background: transparent;
   border: 0;
-  cursor:pointer;
+  cursor: pointer;
   position: absolute;
   right: 1em;
   top: 1em;
   z-index: 1000;
 }
-.nav-open .nav{
+.nav-open .nav {
   transform: translateX(0);
-  
 }
-.nav-open .humburger::before{
+.nav-open .humburger::before {
   transform: rotate(90deg) translateX(-6px);
   background: var(--clr-accent);
 }
-.nav-open .humburger::after{
+.nav-open .humburger::after {
   background: var(--clr-accent);
   opacity: 0;
 }
-.nav-open .nav-toggle{
+.nav-open .nav-toggle {
   position: fixed;
 }
-.nav-open .humburger{
-  transform: rotate(.625turn);
+.nav-open .humburger {
+  transform: rotate(0.625turn);
   background: var(--clr-accent);
 }
 
@@ -408,4 +411,17 @@ header {
 
 .social-list__link {
   padding: 0.5em;
+}
+
+/* portfolio item styles */
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
